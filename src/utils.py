@@ -1,7 +1,7 @@
 import re
 import threading
 import time
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 import markdown
 from bs4 import BeautifulSoup
@@ -100,9 +100,9 @@ class MilvusUtils:
         """
         if utility.has_collection(collection_name):
             raise ValueError(f"Collection {collection_name} already exists.")
-            # utility.drop_collection(collection_name)  # 测试阶段，暂时是删除 todo
-        collection = Collection.create_collection(name=collection_name, schema=schema,
-                                                  consistency_level=consistency_level)
+        # pymilvus 2.6 需要整数类型，None 默认用 Strong(0)
+        _cl = {"Strong": 0, "Session": 1, "Bounded": 2, "Eventually": 3}.get(consistency_level, consistency_level if consistency_level is not None else 0)
+        collection = Collection(name=collection_name, schema=schema, consistency_level=_cl)
         return collection
 
     def get_collection(self, collection_name: str) -> Collection:
@@ -157,10 +157,10 @@ def get_deepseek_model(
 
 def get_qwen_model(
         model: str = "qwen-turbo-2025-07-15",
-        api_key: str = None,
+        api_key: Optional[str] = None,
         streaming: bool = True,
-        model_kwargs: dict = None,
-        callbacks: Callbacks = None):
+        model_kwargs: Optional[dict] = None,
+        callbacks: Optional[Callbacks] = None) -> ChatTongyi:
     """获取通义千问模型实例
     - model: 模型名称，默认为 "qwen-turbo-2025-07-15"
     - api_key: 调用模型的 api_key
@@ -173,7 +173,7 @@ def get_qwen_model(
     return model
 
 
-def markdown_to_text(md_text):
+def markdown_to_text(md_text: str) -> str:
     """ 将 Markdown 文本转换为纯文本，并去除列表前缀和空行"""
 
     # 1. Markdown 转 HTML
@@ -197,7 +197,7 @@ def markdown_to_text(md_text):
     return cleaned_text
 
 
-def unique_objects_by_id(objects):
+def unique_objects_by_id(objects: list) -> list:
     seen_ids = set()
     unique_objects = []
 

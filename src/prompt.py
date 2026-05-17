@@ -57,3 +57,14 @@ hyde_query_prompt_template_3 = """请根据问题进行合理、合适的扩展�
 HYDE_QUERY_PROMPT = PromptTemplate(
     template=hyde_query_prompt_template_3, input_variables=["question"]
 )
+
+# 通用对话（不选知识库时使用）
+GENERAL_CHAT_TEMPLATE = """你是一个智能 AI 助手，请回答用户的问题。
+
+问题: {question}
+
+请给出有用、准确、简洁的回答。"""
+
+GENERAL_CHAT_PROMPT = PromptTemplate(
+    template=GENERAL_CHAT_TEMPLATE, input_variables=["question"]
+)

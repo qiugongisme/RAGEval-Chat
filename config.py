@@ -1,3 +1,6 @@
+import os
+
+
 class Config:
     # 文档目录路径
     FILE_PATH = "./data"
@@ -20,8 +23,8 @@ class Config:
     EMBEDDING_FIELD_NAME = "embedding"  # 向量字段名称
 
     # 向量存储
-    MILVUS_HOST = "localhost"
-    MILVUS_PORT = 19530
+    MILVUS_HOST = os.getenv("MILVUS_HOST", "localhost")
+    MILVUS_PORT = int(os.getenv("MILVUS_PORT", "19530"))
 
     # COLLECTION_NAME = "RAG_PART_NFRA"
     # COLLECTION_NAME = "RAG_PART_NFRA_LARGE"
@@ -76,5 +79,8 @@ class Config:
 
     """ MilvusRetriever 支持的搜索类型 "dense" : 单密集检索, "hybrid"：混合检索（稀疏和密集，默认） """
     MILVUS_RETRIEVER_SEARCH_TYPE = "hybrid"
+
+    # API 配置文件存储路径
+    DATA_DIR = "./data"
 
 config = Config()

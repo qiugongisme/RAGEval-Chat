@@ -1,0 +1,20 @@
+[
+  {
+    "name": "DeepSeek Chat",
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "temperature": 0.6,
+    "max_tokens": 5120,
+    "id": "model_5f8d4212",
+    "api_key": "sk-3be13a48b6c246fc91d386867bb5d235"
+  },
+  {
+    "name": "Qwen Plus",
+    "provider": "qwen",
+    "model_name": "qwen-plus",
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "id": "model_05b50c3a",
+    "api_key": "sk-fe49699c805a48148ee9bf17d58e1e4e"
+  }
+]

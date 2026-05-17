@@ -1,0 +1,691 @@
+[
+  {
+    "id": "kb_367b7fc8",
+    "name": "金融监管法规库",
+    "description": "国家金融监督管理总局相关法律法规",
+    "embedding_model": "BAAI/bge-base-zh-v1.5",
+    "hybrid_search": false,
+    "collection_name": "kb_367b7fc8",
+    "doc_count": 110,
+    "chunk_count": 969,
+    "created_at": "2026-05-11T13:18:46.210285+00:00",
+    "files": [
+      {
+        "id": "b11001db",
+        "filename": "中华人民共和国保险法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国保险法.pdf",
+        "size": 265113,
+        "type": "pdf"
+      },
+      {
+        "id": "322b4de5",
+        "filename": "中华人民共和国信托法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国信托法.pdf",
+        "size": 157884,
+        "type": "pdf"
+      },
+      {
+        "id": "2ea9bc22",
+        "filename": "中华人民共和国反洗钱法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国反洗钱法.pdf",
+        "size": 220222,
+        "type": "pdf"
+      },
+      {
+        "id": "d6dbf497",
+        "filename": "中华人民共和国商业银行法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国商业银行法.pdf",
+        "size": 201932,
+        "type": "pdf"
+      },
+      {
+        "id": "53c70bf1",
+        "filename": "中华人民共和国外资保险公司管理条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国外资保险公司管理条例.pdf",
+        "size": 150866,
+        "type": "pdf"
+      },
+      {
+        "id": "696b05ad",
+        "filename": "中华人民共和国外资银行管理条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国外资银行管理条例.pdf",
+        "size": 181114,
+        "type": "pdf"
+      },
+      {
+        "id": "dcb8ee51",
+        "filename": "中华人民共和国票据法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国票据法.pdf",
+        "size": 167469,
+        "type": "pdf"
+      },
+      {
+        "id": "8816ba2f",
+        "filename": "中华人民共和国银行业监督管理法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\中华人民共和国银行业监督管理法.pdf",
+        "size": 165766,
+        "type": "pdf"
+      },
+      {
+        "id": "d6159771",
+        "filename": "储蓄管理条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\储蓄管理条例.pdf",
+        "size": 134296,
+        "type": "pdf"
+      },
+      {
+        "id": "5621cdfe",
+        "filename": "农业保险条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\农业保险条例.pdf",
+        "size": 155469,
+        "type": "pdf"
+      },
+      {
+        "id": "a85b65ca",
+        "filename": "国有重点金融机构监事会暂行条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\国有重点金融机构监事会暂行条例.pdf",
+        "size": 140505,
+        "type": "pdf"
+      },
+      {
+        "id": "39c2c786",
+        "filename": "机动车交通事故责任强制保险条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\机动车交通事故责任强制保险条例.pdf",
+        "size": 163194,
+        "type": "pdf"
+      },
+      {
+        "id": "70828b88",
+        "filename": "融资担保公司监督管理条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\融资担保公司监督管理条例.pdf",
+        "size": 170324,
+        "type": "pdf"
+      },
+      {
+        "id": "abab08d1",
+        "filename": "金融机构撤销条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\金融机构撤销条例.pdf",
+        "size": 143539,
+        "type": "pdf"
+      },
+      {
+        "id": "0fae72c2",
+        "filename": "金融资产管理公司条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\金融资产管理公司条例.pdf",
+        "size": 130152,
+        "type": "pdf"
+      },
+      {
+        "id": "6d3689aa",
+        "filename": "金融违法行为处罚办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\金融违法行为处罚办法.pdf",
+        "size": 138386,
+        "type": "pdf"
+      },
+      {
+        "id": "7bd4e9a1",
+        "filename": "防范和处置非法集资条例.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\laws_regulations\\防范和处置非法集资条例.pdf",
+        "size": 182514,
+        "type": "pdf"
+      },
+      {
+        "id": "340c9f32",
+        "filename": "人身保险产品信息披露管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\人身保险产品信息披露管理办法.pdf",
+        "size": 172939,
+        "type": "pdf"
+      },
+      {
+        "id": "426c7ea7",
+        "filename": "企业集团财务公司管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\企业集团财务公司管理办法.pdf",
+        "size": 249045,
+        "type": "pdf"
+      },
+      {
+        "id": "7ac61f86",
+        "filename": "保险保障基金管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\保险保障基金管理办法.pdf",
+        "size": 173837,
+        "type": "pdf"
+      },
+      {
+        "id": "d95c7f36",
+        "filename": "保险资产管理公司管理规定.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\保险资产管理公司管理规定.pdf",
+        "size": 271686,
+        "type": "pdf"
+      },
+      {
+        "id": "109966f9",
+        "filename": "保险销售行为管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\保险销售行为管理办法.pdf",
+        "size": 226911,
+        "type": "pdf"
+      },
+      {
+        "id": "324c9b1b",
+        "filename": "商业银行资本管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\商业银行资本管理办法.pdf",
+        "size": 541558,
+        "type": "pdf"
+      },
+      {
+        "id": "052edbed",
+        "filename": "商业银行金融资产风险分类办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\商业银行金融资产风险分类办法.pdf",
+        "size": 196349,
+        "type": "pdf"
+      },
+      {
+        "id": "ed238602",
+        "filename": "国家金融监督管理总局信访工作办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\国家金融监督管理总局信访工作办法.pdf",
+        "size": 250687,
+        "type": "pdf"
+      },
+      {
+        "id": "8b9cc1fa",
+        "filename": "国家金融监督管理总局行政处罚办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\国家金融监督管理总局行政处罚办法.pdf",
+        "size": 264774,
+        "type": "pdf"
+      },
+      {
+        "id": "de17417f",
+        "filename": "小额贷款公司监督管理暂行办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\小额贷款公司监督管理暂行办法.pdf",
+        "size": 238535,
+        "type": "pdf"
+      },
+      {
+        "id": "b0fa7444",
+        "filename": "汽车金融公司管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\汽车金融公司管理办法.pdf",
+        "size": 238958,
+        "type": "pdf"
+      },
+      {
+        "id": "16055c4e",
+        "filename": "消费金融公司管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\消费金融公司管理办法.pdf",
+        "size": 257904,
+        "type": "pdf"
+      },
+      {
+        "id": "997d62e0",
+        "filename": "理财公司内部控制管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\理财公司内部控制管理办法.pdf",
+        "size": 234499,
+        "type": "pdf"
+      },
+      {
+        "id": "df4db1f8",
+        "filename": "货币经纪公司管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\货币经纪公司管理办法.pdf",
+        "size": 237036,
+        "type": "pdf"
+      },
+      {
+        "id": "6952cc92",
+        "filename": "金融机构产品适当性管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\金融机构产品适当性管理办法.pdf",
+        "size": 210028,
+        "type": "pdf"
+      },
+      {
+        "id": "bd060bed",
+        "filename": "金融机构合规管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\金融机构合规管理办法.pdf",
+        "size": 225588,
+        "type": "pdf"
+      },
+      {
+        "id": "038bb20e",
+        "filename": "金融租赁公司管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\金融租赁公司管理办法.pdf",
+        "size": 303038,
+        "type": "pdf"
+      },
+      {
+        "id": "23f5c650",
+        "filename": "银行保险机构公司治理监管评估办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\银行保险机构公司治理监管评估办法.pdf",
+        "size": 168082,
+        "type": "pdf"
+      },
+      {
+        "id": "91fbb2d4",
+        "filename": "银行保险机构操作风险管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\银行保险机构操作风险管理办法.pdf",
+        "size": 291291,
+        "type": "pdf"
+      },
+      {
+        "id": "381bd711",
+        "filename": "银行保险机构消费者权益保护管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\银行保险机构消费者权益保护管理办法.pdf",
+        "size": 233261,
+        "type": "pdf"
+      },
+      {
+        "id": "814227f0",
+        "filename": "银行保险监督统计管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\银行保险监督统计管理办法.pdf",
+        "size": 165482,
+        "type": "pdf"
+      },
+      {
+        "id": "0ec86419",
+        "filename": "银行卡清算机构管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\银行卡清算机构管理办法.pdf",
+        "size": 238855,
+        "type": "pdf"
+      },
+      {
+        "id": "8e0fdfb4",
+        "filename": "个人贷款管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\three_methods\\个人贷款管理办法.pdf",
+        "size": 204307,
+        "type": "pdf"
+      },
+      {
+        "id": "15944843",
+        "filename": "固定资产贷款管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\three_methods\\固定资产贷款管理办法.pdf",
+        "size": 212149,
+        "type": "pdf"
+      },
+      {
+        "id": "5dfa5589",
+        "filename": "流动资金贷款管理办法.pdf",
+        "path": "D:\\AI\\project\\rag_nfra\\data\\policies_regulations\\three_methods\\流动资金贷款管理办法.pdf",
+        "size": 219549,
+        "type": "pdf"
+      }
+    ],
+    "status": "ready",
+    "split_config": {
+      "separators": [
+        "第\\S*条"
+      ],
+      "chunk_size": 500,
+      "chunk_overlap": 100
+    },
+    "error_message": "",
+    "updated_at": "2026-05-16T13:31:49.589093+00:00",
+    "prompt_template": "你是一位精通中国金融监管法规的专家助手。请严格依据以下检索到的文档内容（{retrieve_context}）回答用户的问题（{question}）。\n\n回答要求：\n1. 仅基于提供的文档内容进行回答，不得自行编造或引用外部知识。\n2. 如果文档内容不足以完整回答问题，请明确说明“根据现有文档，无法完全回答该问题”，并指出已找到的相关部分或缺失的信息。\n3. 回答应准确、专业，引用具体法规名称或条款（如适用）。\n4. 若用户问题涉及多个法规，请分别说明各法规的相关规定。\n5. 避免对法规内容进行主观解读或法律建议，仅陈述事实性信息。"
+  },
+  {
+    "id": "kb_2d3cf045",
+    "name": "中医",
+    "description": "中医百科",
+    "embedding_model": "BAAI/bge-m3",
+    "hybrid_search": true,
+    "status": "ready",
+    "split_config": {
+      "separators": [
+        "\\n\\n"
+      ],
+      "chunk_size": 500,
+      "chunk_overlap": 100
+    },
+    "files": [
+      {
+        "id": "3d1749b9",
+        "filename": "本草纲目拾遗.txt",
+        "path": "./data\\uploads\\kb_2d3cf045\\3d1749b9_本草纲目拾遗.txt",
+        "size": 777637,
+        "type": "txt"
+      },
+      {
+        "id": "1e7e5c4c",
+        "filename": "神农本草经.txt",
+        "path": "./data\\uploads\\kb_2d3cf045\\1e7e5c4c_神农本草经.txt",
+        "size": 262290,
+        "type": "txt"
+      },
+      {
+        "id": "97aedc27",
+        "filename": "针灸神书.txt",
+        "path": "./data\\uploads\\kb_2d3cf045\\97aedc27_针灸神书.txt",
+        "size": 170242,
+        "type": "txt"
+      }
+    ],
+    "collection_name": "kb_2d3cf045",
+    "doc_count": 3,
+    "chunk_count": 929,
+    "error_message": "",
+    "prompt_template": "你是一位精通中医典籍的专家，尤其熟悉《本草纲目拾遗》《神农本草经》和《针灸神书》的内容。请严格依据以下检索到的知识库内容回答用户的问题。如果检索内容中缺乏相关信息，请明确告知“根据现有知识库无法回答该问题”，不要自行编造或推测。\n\n检索到的知识库内容：\n{retrieve_context}\n\n用户的问题：\n{question}\n\n请结合上述典籍原文或相关记载，给出专业、准确的中医解答。回答时尽量引用具体典籍名称和条目，并保持语言简洁易懂。",
+    "created_at": "2026-05-16T13:02:13.191159+00:00",
+    "updated_at": "2026-05-16T13:31:59.747480+00:00"
+  },
+  {
+    "id": "kb_614f7005",
+    "name": "nfra",
+    "description": "",
+    "embedding_model": "BAAI/bge-m3",
+    "hybrid_search": true,
+    "status": "ready",
+    "split_config": {
+      "separators": [
+        "第\\S*条"
+      ],
+      "chunk_size": 500,
+      "chunk_overlap": 100
+    },
+    "files": [
+      {
+        "id": "a3016bc1",
+        "filename": "储蓄管理条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\a3016bc1_储蓄管理条例.pdf",
+        "size": 134296,
+        "type": "pdf"
+      },
+      {
+        "id": "af07138c",
+        "filename": "防范和处置非法集资条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\af07138c_防范和处置非法集资条例.pdf",
+        "size": 182514,
+        "type": "pdf"
+      },
+      {
+        "id": "0218814c",
+        "filename": "国有重点金融机构监事会暂行条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\0218814c_国有重点金融机构监事会暂行条例.pdf",
+        "size": 140505,
+        "type": "pdf"
+      },
+      {
+        "id": "c7a1d00a",
+        "filename": "机动车交通事故责任强制保险条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\c7a1d00a_机动车交通事故责任强制保险条例.pdf",
+        "size": 163194,
+        "type": "pdf"
+      },
+      {
+        "id": "bca4f517",
+        "filename": "金融机构撤销条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\bca4f517_金融机构撤销条例.pdf",
+        "size": 143539,
+        "type": "pdf"
+      },
+      {
+        "id": "4d00188d",
+        "filename": "金融违法行为处罚办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\4d00188d_金融违法行为处罚办法.pdf",
+        "size": 138386,
+        "type": "pdf"
+      },
+      {
+        "id": "4cbc99a4",
+        "filename": "金融资产管理公司条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\4cbc99a4_金融资产管理公司条例.pdf",
+        "size": 130152,
+        "type": "pdf"
+      },
+      {
+        "id": "ad06757d",
+        "filename": "农业保险条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\ad06757d_农业保险条例.pdf",
+        "size": 155469,
+        "type": "pdf"
+      },
+      {
+        "id": "7345f788",
+        "filename": "融资担保公司监督管理条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\7345f788_融资担保公司监督管理条例.pdf",
+        "size": 170324,
+        "type": "pdf"
+      },
+      {
+        "id": "f1eef540",
+        "filename": "中华人民共和国保险法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\f1eef540_中华人民共和国保险法.pdf",
+        "size": 265113,
+        "type": "pdf"
+      },
+      {
+        "id": "429ad97d",
+        "filename": "中华人民共和国反洗钱法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\429ad97d_中华人民共和国反洗钱法.pdf",
+        "size": 220222,
+        "type": "pdf"
+      },
+      {
+        "id": "0dec1a86",
+        "filename": "中华人民共和国票据法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\0dec1a86_中华人民共和国票据法.pdf",
+        "size": 167469,
+        "type": "pdf"
+      },
+      {
+        "id": "4a19c7a1",
+        "filename": "中华人民共和国商业银行法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\4a19c7a1_中华人民共和国商业银行法.pdf",
+        "size": 201932,
+        "type": "pdf"
+      },
+      {
+        "id": "ba496309",
+        "filename": "中华人民共和国外资保险公司管理条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\ba496309_中华人民共和国外资保险公司管理条例.pdf",
+        "size": 150866,
+        "type": "pdf"
+      },
+      {
+        "id": "5d46fc4b",
+        "filename": "中华人民共和国外资银行管理条例.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\5d46fc4b_中华人民共和国外资银行管理条例.pdf",
+        "size": 181114,
+        "type": "pdf"
+      },
+      {
+        "id": "e3e2f8cb",
+        "filename": "中华人民共和国信托法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\e3e2f8cb_中华人民共和国信托法.pdf",
+        "size": 157884,
+        "type": "pdf"
+      },
+      {
+        "id": "3e8e3f51",
+        "filename": "中华人民共和国银行业监督管理法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\3e8e3f51_中华人民共和国银行业监督管理法.pdf",
+        "size": 165766,
+        "type": "pdf"
+      },
+      {
+        "id": "585737fa",
+        "filename": "个人贷款管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\585737fa_个人贷款管理办法.pdf",
+        "size": 204307,
+        "type": "pdf"
+      },
+      {
+        "id": "6a22ba82",
+        "filename": "固定资产贷款管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\6a22ba82_固定资产贷款管理办法.pdf",
+        "size": 212149,
+        "type": "pdf"
+      },
+      {
+        "id": "83c4a71f",
+        "filename": "流动资金贷款管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\83c4a71f_流动资金贷款管理办法.pdf",
+        "size": 219549,
+        "type": "pdf"
+      },
+      {
+        "id": "6642ff88",
+        "filename": "保险保障基金管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\6642ff88_保险保障基金管理办法.pdf",
+        "size": 173837,
+        "type": "pdf"
+      },
+      {
+        "id": "4b28b1a1",
+        "filename": "保险销售行为管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\4b28b1a1_保险销售行为管理办法.pdf",
+        "size": 226911,
+        "type": "pdf"
+      },
+      {
+        "id": "c2d2dc03",
+        "filename": "保险资产管理公司管理规定.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\c2d2dc03_保险资产管理公司管理规定.pdf",
+        "size": 271686,
+        "type": "pdf"
+      },
+      {
+        "id": "706714d4",
+        "filename": "国家金融监督管理总局信访工作办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\706714d4_国家金融监督管理总局信访工作办法.pdf",
+        "size": 250687,
+        "type": "pdf"
+      },
+      {
+        "id": "5b8f6ce8",
+        "filename": "国家金融监督管理总局行政处罚办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\5b8f6ce8_国家金融监督管理总局行政处罚办法.pdf",
+        "size": 264774,
+        "type": "pdf"
+      },
+      {
+        "id": "f6472755",
+        "filename": "货币经纪公司管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\f6472755_货币经纪公司管理办法.pdf",
+        "size": 237036,
+        "type": "pdf"
+      },
+      {
+        "id": "b007d7e6",
+        "filename": "金融机构产品适当性管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\b007d7e6_金融机构产品适当性管理办法.pdf",
+        "size": 210028,
+        "type": "pdf"
+      },
+      {
+        "id": "0110e4fc",
+        "filename": "金融机构合规管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\0110e4fc_金融机构合规管理办法.pdf",
+        "size": 225588,
+        "type": "pdf"
+      },
+      {
+        "id": "a1f47ac9",
+        "filename": "金融租赁公司管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\a1f47ac9_金融租赁公司管理办法.pdf",
+        "size": 303038,
+        "type": "pdf"
+      },
+      {
+        "id": "5da443dc",
+        "filename": "理财公司内部控制管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\5da443dc_理财公司内部控制管理办法.pdf",
+        "size": 234499,
+        "type": "pdf"
+      },
+      {
+        "id": "a0da994d",
+        "filename": "企业集团财务公司管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\a0da994d_企业集团财务公司管理办法.pdf",
+        "size": 249045,
+        "type": "pdf"
+      },
+      {
+        "id": "ad841b62",
+        "filename": "汽车金融公司管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\ad841b62_汽车金融公司管理办法.pdf",
+        "size": 238958,
+        "type": "pdf"
+      },
+      {
+        "id": "e9058213",
+        "filename": "人身保险产品信息披露管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\e9058213_人身保险产品信息披露管理办法.pdf",
+        "size": 172939,
+        "type": "pdf"
+      },
+      {
+        "id": "b06d262b",
+        "filename": "商业银行金融资产风险分类办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\b06d262b_商业银行金融资产风险分类办法.pdf",
+        "size": 196349,
+        "type": "pdf"
+      },
+      {
+        "id": "b48f346d",
+        "filename": "商业银行资本管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\b48f346d_商业银行资本管理办法.pdf",
+        "size": 541558,
+        "type": "pdf"
+      },
+      {
+        "id": "9887969e",
+        "filename": "消费金融公司管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\9887969e_消费金融公司管理办法.pdf",
+        "size": 257904,
+        "type": "pdf"
+      },
+      {
+        "id": "8ddd7c0f",
+        "filename": "小额贷款公司监督管理暂行办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\8ddd7c0f_小额贷款公司监督管理暂行办法.pdf",
+        "size": 238535,
+        "type": "pdf"
+      },
+      {
+        "id": "7009ccce",
+        "filename": "银行保险机构操作风险管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\7009ccce_银行保险机构操作风险管理办法.pdf",
+        "size": 291291,
+        "type": "pdf"
+      },
+      {
+        "id": "997cd613",
+        "filename": "银行保险机构公司治理监管评估办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\997cd613_银行保险机构公司治理监管评估办法.pdf",
+        "size": 168082,
+        "type": "pdf"
+      },
+      {
+        "id": "58b0bffc",
+        "filename": "银行保险机构消费者权益保护管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\58b0bffc_银行保险机构消费者权益保护管理办法.pdf",
+        "size": 233261,
+        "type": "pdf"
+      },
+      {
+        "id": "6f093abc",
+        "filename": "银行保险监督统计管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\6f093abc_银行保险监督统计管理办法.pdf",
+        "size": 165482,
+        "type": "pdf"
+      },
+      {
+        "id": "c5bd2f7e",
+        "filename": "银行卡清算机构管理办法.pdf",
+        "path": "./data\\uploads\\kb_614f7005\\c5bd2f7e_银行卡清算机构管理办法.pdf",
+        "size": 238855,
+        "type": "pdf"
+      }
+    ],
+    "collection_name": "kb_614f7005",
+    "doc_count": 42,
+    "chunk_count": 927,
+    "error_message": "",
+    "prompt_template": "你是一位精通中国金融监管法规的专家助手。知识库中包含以下领域的法律法规：储蓄管理、非法集资防范、保险、商业银行、票据、信托、反洗钱、融资担保、金融资产管理、银行业监督管理、外资银行与保险、贷款管理、金融租赁、消费金融、小额贷款、公司治理、消费者权益保护、行政处罚、信访工作、合规管理、操作风险、资本管理、资产风险分类、产品适当性、信息披露、保险销售、保险保障基金、货币经纪、银行卡清算、理财公司内控、企业集团财务公司、汽车金融等。\n\n请基于以下检索到的文档内容回答用户的问题。如果检索内容不足以给出准确、完整的回答，请明确说明“根据现有知识库信息，无法完全回答该问题”，并基于已有信息提供部分解答或相关法规指引。\n\n检索到的文档内容：\n{retrieve_context}\n\n用户问题：\n{question}\n\n请严格按照上述要求回答，不要编造未在检索内容中出现的法规条文或信息。",
+    "created_at": "2026-05-17T04:15:00.133357+00:00",
+    "updated_at": "2026-05-17T07:43:01.922045+00:00",
+    "index_config": {
+      "dense_index_type": "IVF_FLAT",
+      "dense_metric": "IP",
+      "nlist": 100,
+      "nprobe": 10,
+      "sparse_index_type": "SPARSE_INVERTED_INDEX",
+      "sparse_metric": "IP"
+    }
+  }
+]

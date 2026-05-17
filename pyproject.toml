@@ -1,0 +1,20 @@
+[project]
+name = "rag-nfra"
+description = "NFRA 智能问答系统 — 金融监管 RAG 项目"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = ["venv", ".venv", "__pycache__", "node_modules", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]  # 已经在 line-length 控制
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

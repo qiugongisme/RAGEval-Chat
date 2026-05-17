@@ -30,19 +30,26 @@ class MilvusRetriever(BaseRetriever):
     collection: Optional[Collection] = None
     search_type: Optional[str] = None
     bgem3_ef: Optional[BGEM3EmbeddingFunction] = None
+    collection_name: Optional[str] = None
+    nprobe: Optional[int] = None
 
-    def __init__(self, search_type: str = config.MILVUS_RETRIEVER_SEARCH_TYPE, **kwargs):
+    def __init__(self, search_type: str = config.MILVUS_RETRIEVER_SEARCH_TYPE,
+                 collection_name: Optional[str] = None,
+                 nprobe: Optional[int] = None, **kwargs):
         super().__init__(**kwargs)
-        self.milvus_client = MilvusUtils()
-        self.collection = self.milvus_client.get_collection(config.COLLECTION_NAME)
-        if not self.milvus_client.is_collection_loaded(collection_name=config.COLLECTION_NAME):
+        # 使用 object.__setattr__ 绕过 Pydantic v1 __setattr__ 的类型校验
+        object.__setattr__(self, 'collection_name', collection_name or config.COLLECTION_NAME)
+        object.__setattr__(self, 'milvus_client', MilvusUtils())
+        object.__setattr__(self, 'collection', self.milvus_client.get_collection(self.collection_name))
+        if not self.milvus_client.is_collection_loaded(collection_name=self.collection_name):
             self.collection.load()
-        self.search_type = search_type  # 默认使用 hybrid 搜索，由 config.py 中 MILVUS_RETRIEVER_SEARCH_TYPE 配置
+        object.__setattr__(self, 'search_type', search_type)
+        object.__setattr__(self, 'nprobe', nprobe if nprobe is not None else config.NPROBE)
 
         if search_type == "hybrid":
-            self.bgem3_ef = BGEM3EmbeddingFunction(use_fp16=config.BGEM3_USE_FP16, device=config.BGEM3_DEVICE)
+            object.__setattr__(self, 'bgem3_ef', BGEM3EmbeddingFunction(use_fp16=config.BGEM3_USE_FP16, device=config.BGEM3_DEVICE))
         else:
-            self.embedder = get_cached_embedder("." + config.EMBEDDINGS_CACHE_PATH)
+            object.__setattr__(self, 'embedder', get_cached_embedder("." + config.EMBEDDINGS_CACHE_PATH))
 
     def _search_single_query(self, qry: str) -> List[Hits]:
         try:
@@ -52,7 +59,7 @@ class MilvusRetriever(BaseRetriever):
 
             search_params = {
                 "metric_type": config.METRIC_TYPE,
-                "params": {"nprobe": config.NPROBE}
+                "params": {"nprobe": self.nprobe}
             }
 
             results = self.collection.search(
@@ -74,7 +81,7 @@ class MilvusRetriever(BaseRetriever):
         :return: 检索到的 Hits 集合
         """
         if self.search_type == "hybrid":
-            return milvus_hybrid_retrieve(collection=self.collection, bgem3_ef=self.bgem3_ef, query=query)
+            return milvus_hybrid_retrieve(collection=self.collection, bgem3_ef=self.bgem3_ef, query=query, nprobe=self.nprobe)
         else:
             query_list = [q for q in query.split("\n") if q.strip()]
             result_list = [self._search_single_query(qry) for qry in query_list]
@@ -170,7 +177,8 @@ def query_multi_retiever(retriever: BaseRetriever, model: BaseModel) -> BaseRetr
 
 
 def milvus_hybrid_retrieve(collection: Collection, bgem3_ef: BGEM3EmbeddingFunction, query: str, k: int = config.TOP_K,
-                           rerank_method: str = config.RERANK_METHOD_RRF) -> list[Hits]:
+                           rerank_method: str = config.RERANK_METHOD_RRF,
+                           nprobe: Optional[int] = None) -> list[Hits]:
     """在Milvus中执行稠密和稀疏向量混合检索，并对结果进行重排。
     :param collection: Milvus集合对象，用于执行搜索操作。
     :param bgem3_ef: 用于生成查询文本的稠密和稀疏向量表示。
@@ -178,11 +186,13 @@ def milvus_hybrid_retrieve(collection: Collection, bgem3_ef: BGEM3EmbeddingFunct
     :param k: 返回的最相似结果数量，默认值由配置项 config TOP_K 指定。
     :param rerank_method: 指定结果重排方法，支持加权合并或RRF（Reciprocal Rank Fusion），
                                          默认值由配置项 config RERANK_METHOD_RRF 指定。
+    :param nprobe: 查询时聚类数目，默认使用 config.NPROBE
     :return: list: 检索并重排后的结果 Hits 对象列表
     """
+    _nprobe = nprobe if nprobe is not None else config.NPROBE
     dense_params = {
         "metric_type": config.METRIC_TYPE,
-        "params": {"nprobe": config.NPROBE}
+        "params": {"nprobe": _nprobe}
     }
     sparse_params = {
         "metric_type": config.SPARSE_METRIC_TYPE,

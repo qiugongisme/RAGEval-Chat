@@ -1,4 +1,5 @@
 from operator import itemgetter
+from typing import Optional
 
 from langchain.callbacks import AsyncIteratorCallbackHandler
 from langchain.chains.base import Chain
@@ -15,19 +16,19 @@ def get_check_chain() -> Chain:
     """获取检查链，用于判断问题是否与国家金融监督管理总局（NFRA）政策法规相关的提问。"""
     model = get_deepseek_model()
 
-    check_chain = CHECK_NFRA_PROMPT | model | BooleanOutputParser()
+    check_chain: Chain = CHECK_NFRA_PROMPT | model | BooleanOutputParser()
 
     return check_chain
 
 
-def get_qa_chain(out_callback: AsyncIteratorCallbackHandler) -> Chain:
+def get_qa_chain(out_callback: Optional[AsyncIteratorCallbackHandler] = None) -> Chain:
     """
     获取问答链，用于回答与国家金融监督管理总局（NFRA）政策法规相关的问题。
     :param out_callback:
     :return: Chain (langchain.chains.base)
     """
 
-    callbacks = [out_callback] if out_callback else []
+    callbacks: list = [out_callback] if out_callback else []
 
     # 定义 Hyde 查询扩展链
     # hyde_chain = get_hyde_chain()
@@ -81,7 +82,7 @@ def get_qa_chain(out_callback: AsyncIteratorCallbackHandler) -> Chain:
     return chain
 
 
-def get_hyde_chain():
+def get_hyde_chain() -> Chain:
     # model = get_qwen_model(model="qwen-plus-2025-01-25", streaming=False)
 
     model = get_qwen_model(model="qwen3-4b", streaming=False, model_kwargs={"enable_thinking": False})

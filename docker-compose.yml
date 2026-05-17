@@ -1,5 +1,3 @@
-version: '3.5'
-
 services:
   etcd:
     container_name: milvus-etcd
@@ -38,7 +36,7 @@ services:
 
   standalone:
     container_name: milvus-standalone
-    image: milvusdb/milvus:v2.5.4
+    image: registry.cn-hangzhou.aliyuncs.com/zilliztech/milvus:v2.5.4
     command: ["milvus", "run", "standalone"]
     security_opt:
     - seccomp:unconfined
@@ -60,6 +58,35 @@ services:
     depends_on:
       - "etcd"
       - "minio"
+
+  backend:
+    container_name: nfra-backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MILVUS_HOST=standalone
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY}
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      standalone:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    container_name: nfra-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
 
 networks:
   default:
